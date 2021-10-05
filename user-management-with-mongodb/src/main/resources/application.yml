@@ -1,0 +1,22 @@
+server:
+  port: 9070
+
+spring:
+  application:
+    name: user-management-with-mongodb
+
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      username: root
+      password: root
+      database: users_database
+
+
+security:
+  token-key: 123456
+  token-type: Bearer
+  separator: --
+  validity: 10000000
+  authorities-key: authorities
