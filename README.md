@@ -8,5 +8,4 @@ Web service to manage users with CRUD and authentication operations, using Sprin
 - Mongo database
   * Mongo entities
   * Mongo repositories
-- Postman queries
 - Docker compose script config for requirements
