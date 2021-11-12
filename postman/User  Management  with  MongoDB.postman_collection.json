@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "286dd2fc-d8eb-41fe-97a2-d0201340bed3",
+		"name": "User  Management  with  MongoDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"root@gmail.com\",\n    \"password\": \"root\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9070/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9070",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJhdXRob3JpdGllcyI6IkFkbWluaXN0cmF0b3IiLCJzdWIiOiI2MTViOTZlNDk2MWZmMjNmYTM1MWEzNGItLXJvb3RAZ21haWwuY29tIiwiaWF0IjoxNjM2Njc5MjA5LCJleHAiOjE2MzY2ODkyMDl9.fIjzSBCb5F1Dx7XqAxP0SXUxIgsTFUhRrTMRDFB6jXA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9070/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9070",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get User by Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJhdXRob3JpdGllcyI6IkFkbWluaXN0cmF0b3IiLCJzdWIiOiI2MTViOTZlNDk2MWZmMjNmYTM1MWEzNGItLXJvb3RAZ21haWwuY29tIiwiaWF0IjoxNjM2Njc5MjA5LCJleHAiOjE2MzY2ODkyMDl9.fIjzSBCb5F1Dx7XqAxP0SXUxIgsTFUhRrTMRDFB6jXA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9070/users/615b96e4961ff23fa351a34b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9070",
+					"path": [
+						"users",
+						"615b96e4961ff23fa351a34b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJhdXRob3JpdGllcyI6IkFkbWluaXN0cmF0b3IiLCJzdWIiOiI1NDY5OTgxNzMwNjM3MjU1ODEzLS1yb290QGdtYWlsLmNvbSIsImlhdCI6MTYzNjY3NjU0NywiZXhwIjoxNjM2Njg2NTQ3fQ.S60USbfsD1nVDp7DH_Rdj8ccrxhaCwC5dtGF2hWz2aU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Jane\",\n    \"lastName\": \"Doe\",\n    \"email\": \"jane2@gmail.com\",\n    \"password\": \"123\",\n    \"roles\": [\n        {\n            \"id\": \"615b96e3961ff23fa351a34a\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9070/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9070",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Edit User",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJhdXRob3JpdGllcyI6IkFkbWluaXN0cmF0b3IiLCJzdWIiOiI2MTViOTZlNDk2MWZmMjNmYTM1MWEzNGItLXJvb3RAZ21haWwuY29tIiwiaWF0IjoxNjM2Njc5MjA5LCJleHAiOjE2MzY2ODkyMDl9.fIjzSBCb5F1Dx7XqAxP0SXUxIgsTFUhRrTMRDFB6jXA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Jane\",\n    \"lastName\": \"Doe2\",\n    \"email\": \"jane18@gmail.com\",\n    \"password\": \"123\",\n    \"roles\": [\n        {\n            \"id\": \"615b96e3961ff23fa351a34a\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9070/users/618dc0ee04e6d551e27df13c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9070",
+					"path": [
+						"users",
+						"618dc0ee04e6d551e27df13c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyIkc2VjdXJpdHkuYXV0aG9yaXRpZXMta2V5IjoiQWRtaW5pc3RyYXRvciIsInN1YiI6IjMtLXJvb3RAZ21haWwuY29tIiwiaWF0IjoxNjM2Njc1MzIxLCJleHAiOjE2MzY2ODUzMjF9.cUXuDUgX6LOPu2ApyvbJtIeVLWNnPgr3r_aqLyPpIgM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9070/users/618dc0d204e6d551e27df13b",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9070",
+					"path": [
+						"users",
+						"618dc0d204e6d551e27df13b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Roles",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9070/users/roles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9070",
+					"path": [
+						"users",
+						"roles"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
