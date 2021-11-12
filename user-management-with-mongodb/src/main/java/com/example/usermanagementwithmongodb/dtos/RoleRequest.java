@@ -10,6 +10,6 @@ import javax.validation.constraints.NotNull;
 @AllArgsConstructor
 @ToString
 public class RoleRequest {
-    @NotNull(message = "Role id cannot be empty")
-    private Long id;
+    @NotNull(message = "Role id cannot be null")
+    private String id;
 }

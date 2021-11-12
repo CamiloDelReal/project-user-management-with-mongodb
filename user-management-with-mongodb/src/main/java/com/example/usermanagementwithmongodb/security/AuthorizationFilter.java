@@ -75,7 +75,7 @@ public class AuthorizationFilter extends BasicAuthenticationFilter {
             String subject = claims.getSubject();
             String[] subjectData = subject.split(separator);
             if(subjectData.length == 2 && subjectData[0] != null && subjectData[1] != null) {
-                BigInteger id = new BigInteger(subjectData[0]);
+                String id = subjectData[0];
                 String email = subjectData[1];
                 User user = userService.getByEmail(email);
                 if(user != null) {

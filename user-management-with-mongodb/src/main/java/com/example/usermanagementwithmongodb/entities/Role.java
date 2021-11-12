@@ -4,8 +4,6 @@ import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.math.BigInteger;
-
 @Getter
 @Setter
 @NoArgsConstructor
@@ -13,6 +11,9 @@ import java.math.BigInteger;
 @ToString
 @Document(collection = "roles")
 public class Role {
+    public static final String GUEST = "Guest";
+    public static final String ADMINISTRATOR = "Administrator";
+
     @Id
     private String id;
     private String name;

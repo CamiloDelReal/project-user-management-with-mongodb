@@ -3,7 +3,7 @@ package com.example.usermanagementwithmongodb.dtos;
 import lombok.*;
 
 import javax.validation.constraints.NotNull;
-import java.util.Set;
+import java.util.List;
 
 @Getter
 @Setter
@@ -19,5 +19,5 @@ public class UserRequest {
     private String email;
     @NotNull(message = "Password cannot be empty")
     private String password;
-    private Set<RoleRequest> roles;
+    private List<RoleRequest> roles;
 }
